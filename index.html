@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="css/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+ body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .left {
+      width: 50%;
+      text-align: center;
+    }
+
+    .right {
+      width: 50%;
+      padding-left: 20px;
+    }
+
+    .big-image {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 15px;
+      box-shadow: 0 0px 20px 10px rgba(0, 0, 0, 0.1);
+    }
+.big-image:hover{
+  box-shadow: 0 0px 20px 10px rgba(0, 0, 0, 0.1);
+}
+    .small-images {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .small-images img {
+      width: 22%;
+      cursor: pointer;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .small-images img:hover {
+      transform: scale(1.1);
+    }
+
+    .product-details {
+      margin-top: 20px;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
+    .real-price {
+      text-decoration: line-through;
+      color: #aaa;
+    }
+
+    .sale-price {
+      color: #e60000;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    .option-container {
+      margin-top: 20px;
+    }
+
+    .option-label {
+      font-size: 1.1rem;
+    }
+
+    .option-select {
+      padding: 8px;
+      margin-top: 5px;
+      width: 100%;
+      font-size: 1rem;
+    }
+    .addtocart{
+      background-color: #e60000;
+      color: white;
+      padding: 7px;
+      border: 2px solid #e60000;
+      border-radius: 10px;
+    }
+
+   
+  </style>
+</head>
+<body>
+
+    <!-- navbar start -->
+
+    <nav class="navbar navbar-expand-lg p-0">
+        <div class="container-fluid">
+        
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item" style="color: black;font-family: Algerian;">
+                <a class="nav-link active fs-4 " aria-current="page" href="#">||Home||</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link  ms-5 fs-4" href="about.html">||About us||</a>
+              </li>
+ <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle ms-5 fs-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  ||Interior design||
+                </a>
+                <ul class="dropdown-menu" id="hide-links">
+                    <li><a class="dropdown-item" href="inresiden.html">Residential</a></li>
+                    <li><a class="dropdown-item" href="incommer.html">commercial</a></li>
+                    <li><a class="dropdown-item" href="tksdetail.html">Turn key solution</a></li>
+                    <li><a class="dropdown-item" href="#">custome made</a></li>
+                    <li><a class="dropdown-item" href="#">bespoke</a></li>
+
+
+                  </ul>
+              <li class="nav-item">
+                <a class="nav-link  ms-5 fs-4" href="contact.html">||Countact us||</a>
+              </li>
+              <form class="d-flex ms-3" role="search">
+                <input class="form-control ms-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>  
+
+      <div style="background-color:#f6f8f3;" class="container mt-3">
+        <div class="row">
+        <div class="box col-12 d-flex justify-content-center mt-3">
+          <img src="images/logo1.png" alt="Logo" class="logo mx-auto" style="width: 200%; height: auto;">
+        </div>
+      </div>
+  </div>
+       <!-- navbar end -->
+
+ <!-- session 1 start -->
+
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner ">
+          <div class="carousel-item active">
+            <img  src="images/slide1.jpg" class="d-block w-100" style="height: 600px;" alt="..." id="img-slide">
+          </div>
+          <div class="carousel-item">
+            <img src="images/slide3_files/slide1.jpg" class="d-block w-100" style="height: 600px;" alt="..."  id="img-slide">
+          </div>
+          <div class="carousel-item">
+            <img src="images/slide3.webp" class="d-block w-100" style="height: 600px;" alt="..."  id="img-slide">
+          </div>
+        </div>
+        <button  class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-dark color-white" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-dark color-white" aria-hidden="true"></span>
+          <span class="visually-hidden ">Next</span>
+        </button>
+     
+        
+     
+      </div>
+
+      <h1 style="position: absolute; bottom: 15%; left: 50%; transform: translateX(-50%); color: #f6f8f3; font-size: 8vw; filter: brightness(0.7); text-align: center; width: 100%;">
+        ZUNI FURNITURE'S
+      </h1>
+      <!-- session 1 end -->
+
+      <!-- session 2 start -->
+
+      <div class="container d-flex justify-content-center ">
+        <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <button class="btn btn-lg m-2" id="btn1" style="font-size: 35px; border-radius: 20px; background-color: #f6f8f3; font-family: Algerian;">Residential</button>
+        </div>
+
+
+<div class="col-lg-4 col-md-4 col-sm-12">
+        <button class="btn btn-lg m-2" id="btn2" style="font-size: 35px; border-radius: 20px; background-color: #f6f8f3; font-family: Algerian;">Commercial</button>
+      </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-12">
+        <button class="btn btn-lg m-2" id="btn3" style="font-size: 35px; border-radius: 20px; background-color: #f6f8f3; font-family: Algerian;">Tkssolutions</button>
+      </div>
+      
+      
+      
+      </div>
+    </div>
+
+      <div class="container">
+        <div class="row" style="gap: 60px;">
+          <div class="col-lg-3 col-md-4 col-sm-6 mt-3 ">
+<img class="mainimages" src="images/residen1.jpg" style="height: 250px;width: 350px; filter: brightness(0.6);" alt="">
+<a  style="color:white; font-size: 30px;position: relative;bottom: 150px;left: 110px;box-shadow: 0px 0px 30px 10px black;" href="residetail.html">Residential</a>
+          </div>
+       
+          <div class="col-lg-3 col-md-4 col-sm-6 mt-3 me-lg-0"style="margin-right: 30px;">
+            <img class="mainimages ms-lg-4" src="images/commer13.jpg" style="height: 250px;width: 350px; filter: brightness(0.6);" alt="">
+            <a  style="color:white; font-size: 30px;position: relative;bottom: 150px;left: 110px;box-shadow: 0px 0px 30px 10px black;" href="commerdetail.html">commercial</a>
+                      </div>
+       
+                 
+
+                      <div class="col-lg-3 col-md-4 col-sm-6 mt-3 ms-lg-5 me-lg-0"style="margin-left:20px;">
+                        <img class="mainimages" src="images/slide3_files/e674bd128865693.Y3JvcCwyODc2LDIyNTAsMTA2LDA.jpg" style="height: 250px;width: 350px; filter: brightness(0.6);" alt="">
+                        <a  style="color:white; font-size: 30px;position: relative;bottom: 150px;left: 70px;box-shadow: 0px 0px 30px 10px black;" href="tksdetail.html">Turn key solution</a>
+                                  </div>
+                   
+                             
+            
+
+       
+        </div>
+      </div>
+      <div>_______________________________________________________________________________________________________________________________________________________</div>
+      <!-- session 3 start -->
+
+
+  <div class="container">
+   
+    <div class="left">
+      <img id="big-image" class="big-image" src="images/mirror1.webp" alt="">
+
+      <div class="small-images">
+        <img src="images/mirror2.webp" alt="" onclick="changeImage('images/mirror2.webp')">
+        <img src="images/mirror3.webp" alt="" onclick="changeImage('images/mirror3.webp')">
+        <img src="images/mirror1.webp" alt="" onclick="changeImage('images/mirror1.webp')">
+        
+      </div>
+    </div>
+
+   
+    <div class="right">
+      <h2>beatrice standing mirror 5 by 2ft</h2>
+
+      <div class="product-details">
+        <div class="price">
+          <span class="real-price">5000</span>
+          <span class="sale-price">4000</span>
+        </div>
+
+        
+        <div class="option-container">
+          <label for="" class="option-label">Choose Your Mirror color:</label>
+          <select id="mirror-option" class="option-select" onchange="updateSelectedOption()">
+            <option value="Golden Mirror">Golden Mirror</option>
+            <option value="Black Mirror">Black Mirror</option>
+            <option value="blue Mirror">blue Mirror</option>
+            
+
+          </select>
+        </div>
+        
+        
+
+        
+        <div id="selected-option" style="margin-top: 10px; font-weight: bold; font-size: 1.1rem;">
+          Selected Style: <span id="selected-style">Golden Mirror</span>
+        </div>
+      </div>
+      <button class="addtocart mt-3"><b>Add to cart</b></button>
+    </div>
+  </div>
+<div>_______________________________________________________________________________________________________________________________________________________</div>
+  
+  <script>
+   
+    function changeImage(image) {
+      document.getElementById("big-image").src = image;
+    }
+
+    
+    function updateSelectedOption() {
+      const selectedOption = document.getElementById('mirror-option').value;
+      document.getElementById('selected-style').innerText = selectedOption;
+    }
+  </script>
+
+</body>
+</html>
+
+
+      <!-- session 3 end -->
+
+      <h1 class="mt-5 ms-5">we take pride in our work and our customer testimonials reflect that</h1>
+
+
+     
+  
+      <div style="background-color: #f6f8f3;" class="container mt-4">
+        <div class="row">
+          <div class="col-4">
+            <div id="simple-list-example" class="d-flex flex-column gap-2 simple-list-example-scrollspy text-center">
+              <a class="p-1 rounded" href="#simple-list-item-1">REVIEW 1</a>
+              <a class="p-1 rounded" href="#simple-list-item-2">REVIEW 2</a>
+              <a class="p-1 rounded" href="#simple-list-item-3">REVIEW 3</a>
+              <a class="p-1 rounded" href="#simple-list-item-4">REVIEW 4</a>
+              <a class="p-1 rounded" href="#simple-list-item-5">REVIEW 5</a>
+            </div>
+          </div>
+          <div class="col-8">
+            <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+             
+              <p>1. Sophia M.
+                ⭐️⭐️⭐️⭐️⭐️
+                "I am absolutely thrilled with the furniture I purchased from this website! The quality is outstanding, and the design is exactly what I was looking for. The delivery was quick, and the assembly was seamless. My living room looks incredible now! Highly recommend for anyone looking to upgrade their home with stylish and durable pieces."
+              </p>
+              <h4 id="simple-list-item-2">REVIEW 2</h4>
+              <p>Maliha Malik
+                ⭐️⭐️⭐️⭐️
+                "I recently bought a new dining set from this site, and I'm very pleased with my purchase. The set looks amazing and fits perfectly in my space. The ordering process was easy, and the delivery was on time. The only reason I’m giving it 4 stars instead of 5 is that the instructions for assembly could be clearer. But overall, a fantastic experience."
+              </p>
+      
+              
+              <div id="extra-reviews" style="display: none;">
+                <h4 id="simple-list-item-3">REVIEW 3</h4>
+                <p>Azan
+                  ⭐️⭐️⭐️⭐️⭐️
+                  "Such a great experience shopping for furniture here! The customer service team was really helpful when I had questions about the dimensions of a sofa. The piece arrived in perfect condition and looks even better in person. I’ve received so many compliments from my guests. Will definitely be shopping here again for future furniture needs!"
+                </p>
+      
+                <h4 id="simple-list-item-4">REVIEW 4</h4>
+                <p>Aliya
+                  ⭐️⭐️⭐️⭐️⭐️
+                  "I can't recommend this furniture store enough! The selection is fantastic, with everything from contemporary to classic designs. I purchased a beautiful sectional couch that’s not only comfortable but also adds a luxurious touch to my living room. The delivery was smooth and efficient, and the assembly was quick. Truly an exceptional experience!"
+                </p>
+      
+                <h4 id="simple-list-item-5">REVIEW 5</h4>
+                <p>sana jawad
+                  ⭐️⭐️⭐️⭐️⭐️
+                  "I had such a positive experience purchasing from this website. The website is easy to navigate, and I found exactly what I was looking for without any hassle. My new bedroom set arrived on time, and the quality exceeded my expectations. The craftsmanship and attention to detail are evident in every piece. Will definitely be a repeat customer!"
+                </p>
+              </div>
+      
+              
+              <button id="showMoreBtn" style="background-color: black; border: 2px solid black; padding: 4px; color: aliceblue; display: block; justify-content: center;">
+                <b>Show more</b>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <script>
+        
+        const showMoreBtn = document.getElementById('showMoreBtn');
+        const extraReviews = document.getElementById('extra-reviews');
+      
+        
+        showMoreBtn.addEventListener('click', function() {
+          
+          if (extraReviews.style.display === 'none') {
+            extraReviews.style.display = 'block';
+            showMoreBtn.innerHTML = '<b>Show less</b>';
+          } else {
+            extraReviews.style.display = 'none';
+            showMoreBtn.innerHTML = '<b>Show more</b>';
+          }
+        });
+      </script>
+
+       <!-- footer start -->
+    
+       <footer style="background-color: #f6f8f3; padding: 40px 0; color: #333;margin-top: 5%;">
+             
+        <div class="container-fluid">
+          <div class="row">
+    
+            <div class="col-md-4 mb-4" style="color: #333;">
+              <h5 style="font-weight: bold; color: #333;">About Zuni</h5>
+              <p>At Zuni, we specialize in crafting beautiful, functional furniture that transforms your living spaces. Our designs blend contemporary style with exceptional craftsmanship to offer timeless pieces for every home.</p>
+            </div>
+            
+            
+            <div class="col-md-4 mb-4" style="color: #333;">
+              <h5 style="font-weight: bold; color: #333;">Quick Links</h5>
+              <a href="#" style="color: #333; text-decoration: none; margin: 5px 0; display: block;" onmouseover="this.style.color='#007bff'" onmouseout="this.style.color='#333'">Home</a>
+              <a href="#" style="color: #333; text-decoration: none; margin: 5px 0; display: block;" onmouseover="this.style.color='#007bff'" onmouseout="this.style.color='#333'">Shop</a>
+              <a href="#" style="color: #333; text-decoration: none; margin: 5px 0; display: block;" onmouseover="this.style.color='#007bff'" onmouseout="this.style.color='#333'">About Us</a>
+              <a href="#" style="color: #333; text-decoration: none; margin: 5px 0; display: block;" onmouseover="this.style.color='#007bff'" onmouseout="this.style.color='#333'">Contact</a>
+            </div>
+            
+            
+            <div class="col-md-4 mb-4" style="color: #333;">
+              <h5 style="font-weight: bold; color: #333;">Follow Us</h5>
+              <a href="#" style="color: #333; font-size: 1.5rem; margin-right: 15px;" onmouseover="this.style.color='#007bff'" onmouseout="this.style.color='#333'">Facebook</a>
+              <a href="#" style="color: #333; font-size: 1.5rem; margin-right: 15px;" onmouseover="this.style.color='#007bff'" onmouseout="this.style.color='#333'">Twitter</a>
+              <a href="#" style="color: #333; font-size: 1.5rem; margin-right: 15px;" onmouseover="this.style.color='#007bff'" onmouseout="this.style.color='#333'">Instagram</a>
+              <a href="#" style="color: #333; font-size: 1.5rem; margin-right: 15px;" onmouseover="this.style.color='#007bff'" onmouseout="this.style.color='#333'">Pinterest</a>
+            </div>
+          </div>
+          
+          
+          <div class="footer-bottom" style="text-align: center; padding-top: 20px; font-size: 0.9rem; color: #333;">
+            <p>&copy; 2024 Zuni Furniture. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    
+    </body>
+    </html>
+      
